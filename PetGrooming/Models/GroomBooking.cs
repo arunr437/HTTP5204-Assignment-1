@@ -31,6 +31,31 @@ namespace PetGrooming.Models
         public int Price { get; set; }
 
         public ICollection<GroomService> GroomServices { get; set; }
+        public ICollection<Groomer> Groomers { get; set; }
+        public ICollection<Owner> Owners { get; set; }
+        public ICollection<Pet> Pets { get; set; }
+
+
+
+        //Trying to map one to many relationship between GroomBooking and GroomServices
+        public int GroomServiceID { get; set; }
+        [ForeignKey("GroomServiceID")]
+        public virtual GroomService GroomService { get; set; }
+
+        //Trying to map one to many relationship between GroomBooking and Groomer
+        public int GroomerID { get; set; }
+        [ForeignKey("GroomerID")]
+        public virtual Groomer Groomer { get; set; }
+
+        //Trying to map one to many relationship between GroomBooking and Owners
+        public int OwnerID { get; set; }
+        [ForeignKey("OwnerID")]
+        public virtual Owner Owner { get; set; }
+
+        //Trying to map one to many relationship between GroomBooking and Pets
+        public int PetID { get; set; }
+        [ForeignKey("PetID")]
+        public virtual Pet Pet { get; set; }
 
 
     }

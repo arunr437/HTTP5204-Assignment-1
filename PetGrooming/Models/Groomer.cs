@@ -29,7 +29,8 @@ namespace PetGrooming.Models
         public DateTime DOB { get; set; }
         public int PhoneNumber { get; set; }
         public int HourlyRate { get; set; }
-
+        
+        //Trying to add one to manyrelationship between GroomBooking and Groomer
         public ICollection<GroomServices> GroomServices { get; set; }
     }
 }

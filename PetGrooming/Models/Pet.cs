@@ -35,8 +35,9 @@ namespace PetGrooming.Models
         
         public int SpeciesID { get; set; }
         [ForeignKey("SpeciesID")]
-        public virtual Species Species { get; set; }  
-        
+        public virtual Species Species { get; set; }
+
+        //Trying to map one to many relationship between owner and pets
         public int OwnerID { get; set; }
         [ForeignKey("OwnerID")]
         public virtual Owner Owner { get; set; }

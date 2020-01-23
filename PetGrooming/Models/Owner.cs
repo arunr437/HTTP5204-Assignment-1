@@ -31,7 +31,10 @@ namespace PetGrooming.Models
         public int PhoneNumberWork { get; set; }
         public int PhoneNumberHome { get; set; }
 
+        //Trying to map one to many relationship between owner and pets
         public ICollection<Pet> Pets { get; set; }
+        //One to many relationship between Owner and Groombookings
+        public ICollection<GroomBooking> GroomBooking { get; set; }
 
     }
 }

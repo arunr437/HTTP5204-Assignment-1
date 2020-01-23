@@ -25,8 +25,7 @@ namespace PetGrooming.Models
         public int Cost { get; set; }
         public int Duration { get; set; }
 
-        public int GroomerID { get; set; }
-        [ForeignKey("GroomerID")]
-        public virtual Groomer Groomer { get; set; }
+        //One to many relationship between GroomBooking and GroomServices
+        public ICollection<GroomBooking> GroomBookings { get; set; }
     }
 }
