@@ -1,0 +1,15 @@
+Pet Grooming E-R Diagram Description: 
+
+The PetGrooming database has 6 tables – Pets, Species, Owners, Groomers, GroomBooking, GroomServices. The description for each table and its relationships are as follows: 
+
+	•	Pets: The pets table has the fields Name, Weight, Color and Notes. It has a Many-to-One relationship species.  Many pets can belong to a single species. Also, there exists a Many-to-One relationship between pets and owners, which means that many pets can be owned by a single owner. 
+
+	•	Species: The species table has the species name. One species can contain many pets. Thus, it has a One-to-Many relationship with pets. 
+
+	•	Owners: The owner table has a One-to-Many relationship with pets. It implies that one owner can have may pets. The owner table also has a many to one relationship with GroomBooking which means that one owner can have many groombookings. 
+
+	•	Groomers- The groomers are people who groom pets. The groomers have a One-to-Many relationship with GroomBooking. One groomer can have multiple groom bookings.
+
+	•	GroomBooking – The groomBooking table acts as a mapping table between Groomers, GroomServices, Owners and Pets. This table is used to avoid Many-to-Many relationships between Groomers, GroomServices and Owners tables. 
+
+	•	Groom Services – This table denotes the various grooming services that are offered by groomers. This has a Many-to-Many relationship with Groomers which is avoided by using the GroomBooking table. 
